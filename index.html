@@ -125,7 +125,7 @@
       <div id="results-hri_eucalyptus_1" class="carousel results-carousel">
         <div class="item item-eucalyptus">
           <video poster="" id="hri_eucalyptus_1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/hri_eucalyptus_1.mp4"
+            <source src="./static/videos/hri_eucalyptus_3.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -282,135 +282,6 @@
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-2">Real-World Results</h2>
-        <div class="content has-text-justified">
-        <p>
-          Real-world interactions are out-of-distribution for two main reasons: (1) the behavior of the evader is unscripted and possibly very different to what was observed in simulation, and (2) the physical dynamics of the evader do not follow the unicycle dynamics model as in simulation. 
-        </p>
-        <p>
-          We deploy our policy zero-shot on a physical quadruped robot equipped with an RGB-D camera in unscripted pursuit-evasion interactions. We vary the type of agent the autonomous robot inteacts with from a human to another quadruped teleoperated by a human, and deploy in a variety of unstructured environments like a eucalyptus forest, grassy fields, and brick roads.  
-        </p>
-      </div>
-        <div class="columns is-centered">
-
-          <!-- Column 1 -->
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_drone_field_1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/robot_robot_field_2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-        </div>
-        <!--/ Column 1 -->
-
-        <!-- Column 2 -->
-        <div class="columns is-centered">
-
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_2person_campanile.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_eucalyptus_1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-        </div>
-        <!--/ Column 2 -->
-
-        <!-- Column 3 -->
-        <div class="columns is-centered">
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/robot_robot_field.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_campanile_1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-        </div>
-        <!--/ Column 3 -->
-
-        <!-- Column 4 -->
-        <div class="columns is-centered">
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_eucalyptus_2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-
-          <div class="column">
-            <div class="content">
-              <!-- <h2 class="title is-3">Random</h2> -->
-              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hri_drone_field_2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-        </div>
-        <!--/ Column 3 -->
-
-
-        </div>
-      </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Concurrent Work. -->
@@ -420,7 +291,10 @@
 
         <div class="content has-text-justified">
           <p>
-            We ablate the pursuer policy and deploy <i>Random</i>, <i>MARL</i>, and <i>Game-Theory</i> pursuer policies on a physical quadruped robot to interact with a human.
+            We ablate the pursuer policy and deploy <i>Random</i>, <i>MARL</i>, and <i>Game-Theory</i> pursuer policies on a physical quadruped robot to interact with a human. 
+          </p>
+          <p>
+            We observe that <i>Random</i> and <i>MARL</i> perform qualitatively similarly: they demonstrate information-seeking motions when the evader is not in the field of view and predictive strategies when the evader is visible, i.e., heading towards where the evader will be, not where it is. Conversely, <i>Game-Theory</i> shows inefficient information-seeking motions, taking long detours to reach the evader.
           </p>
         </div>
       <div class="columns is-centered">
@@ -466,6 +340,151 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2">Real-World Results</h2>
+        <div class="content has-text-justified">
+        <p>
+          Real-world interactions are out-of-distribution for two main reasons: (1) the behavior of the evader is unscripted and possibly very different to what was observed in simulation, and (2) the physical dynamics of the evader do not follow the unicycle dynamics model as in simulation. 
+        </p>
+        <p>
+          We deploy our policy zero-shot on a physical quadruped robot equipped with an RGB-D camera in unscripted pursuit-evasion interactions. We vary the type of agent the autonomous robot inteacts with from a human to another quadruped teleoperated by a human, and deploy in a variety of unstructured environments like a eucalyptus forest, grassy fields, and brick roads.  
+        </p>
+      </div>
+
+        <!-- Column 1 -->
+        <div class="columns is-centered interpolation-panel">
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-5">Exo POV</h2>
+              <video style="border: 2px solid black;" id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_drone_field_1.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Top-down drone footage of human-robot interaction.</p>
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-5">Ego Robot POV</h2>
+              <video style="border: 2px solid black; border-radius: 20px;" id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_drone_field_1_egoPOV.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Raw video stream from robot's onboard RGB-D camera.</p>
+            </div>
+          </div>
+
+        </div>
+        <!--/ Column 1 -->
+      
+      <h2 class="title is-3">Human-Robot Interactions</h2>
+        
+
+        <!-- Column 4 -->
+        <div class="columns is-centered">
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_eucalyptus_3.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Robot pursuer predicts where the person will run despite the eucalyptus tree obstacles.</p>
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_2person_campanile.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Multiple humans can play a game of tag with the robot. The robot quickly switches which human it intercepts based on who is in the FOV.</p>
+            </div>
+          </div>
+
+        </div>
+        <!--/ Column 4 -->
+
+        <!-- Column 2 -->
+        <div class="columns is-centered">
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_drone_field_2.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Since the human starts outside the FOV of the robot, the robot turns and seeks until it gets the first detection. The robot predicts the human will go straight and gallops to where the person will be. The human then strategically hides outside robot's FOV to escape.</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_campanile_1.mp4"
+                        type="video/mp4">
+              </video>
+              <p>The human accelerates and swerves to trick the robot. The robot anticipates the serve and keeps the human in its FOV.</p>
+            </div>
+          </div>
+
+        </div>
+        <!--/ Column 2 -->
+
+        <h2 class="title is-3">Robot-Robot Interactions</h2>
+        <div class="content has-text-justified">
+          <p>
+          The black A1 robot is autonomous, running our <i>Random</i> policy and plays the role of the pursuer. The silver Go1 robot is teleoperated by a human to play the evader.  
+          </p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="columns is-centered">
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/robot_robot_field.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Early on, the pursuer predicts and intercepts the evader. The game continues and the evader swerves, hiding outside the pursuer's FOV. The pursuer robot automatically turns and seeks the puruser.</p>
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="content">
+              <!-- <h2 class="title is-3">Random</h2> -->
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/robot_robot_field_2.mp4" 
+                        type="video/mp4">
+              </video>
+              <p>Pursuer predicts the evader's motion, but misses interception.</p>
+            </div>
+          </div>
+
+        </div>
+        <!--/ Column 3 -->
+
+
+        </div>
+      </div>
   </div>
 </section>
 
