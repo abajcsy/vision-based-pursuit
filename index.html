@@ -187,54 +187,31 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-  <h2 class="title is-2">Simulation Experiments</h2>
-  <h2 class="title is-3">Predictive representations enable strategic behavior</h2>
-  <div class="content has-text-justified">
-    <p>
-      One of the key types of privileged information we leverage is future trajectory state, which leaks information about the future intent of the other agent. Here, we ask the question <i>``What is the value of learning predictive representations for action?''</i>
-    </p>
-    <p>
-      We fix the evader policy to be highly predictable and investigate alternative approaches to inferring the evader's latent intent. The evader always moves in Dubins' paths with a fixed time duration for turning or going straight determined randomly upon the start of the episode.
-    </p>
-
-    <p>
-      We consider three approaches: (1) a <b>reactive</b> robot policy which only observes the present relative state and does not infer any latent intent, (2) a <b>look<i>back</i></b> policy which must estimate the  latent intent from a history of relative states without supervision from the future and (3) a <b>look<i>ahead</i></b> policy, which uses a history of relative states and supervision from the future to predict a latent representation of the evader's future trajectory.
-    </p>
-    </div>
+   <!-- Approach. -->
     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Approach</h2>
 
-      <!-- React. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Random</h2>
+        <!-- Approach Details. -->
+        <div class="content has-text-justified">
           <p>
-            Randomly samples a set of controls to apply each 1-3 seconds.
-          </p> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_react.mp4"
-                    type="video/mp4">
-          </video>
+            We approach this problem using privileged learning. The key to our approach is to leverage a fully-observable policy to generate supervision for the partially-observable one. During privileged training, we leverage a new type of privileged information: the future state trajectory of the evader. 
+          </p>
         </div>
-      </div>
-      <!--/ React. -->
-
-       <!-- Lookback vs Lookahead. -->
-      <div class="column">
-        <div class="content">
-          <!-- <h2 class="title is-3">Random</h2>
-          <p>
-            Randomly samples a set of controls to apply each 1-3 seconds.
-          </p> -->
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_lookback_lookahead.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="columns is-vcentered">
+          <div class="column is-vcentered">
+            <img src="./static/images/approach.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>(top) The fully-observable policy knows the true relative state and gets privileged access to the future evader trajectory from which it learns a representation the evader intent. (bottom) The partially-observable policy must plan through physical and latent intent uncertainty.</p>
+          </div>
         </div>
+        <!--/ Approach Details. -->
       </div>
-      <!--/ Lookback vs Lookahead. -->
+    </div>
+    <!--/ Approach. -->
   </div>
 </section>
 
@@ -242,6 +219,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+  <h2 class="title is-2">Simulation Experiments</h2>
   <h2 class="title is-3">Distillation depends on balance of interaction diversity and optimality</h2>
     <div class="content has-text-justified">
       <p>
