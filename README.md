@@ -7,7 +7,7 @@ Please cite:
 @article{bajcsy2023vision
   author    = {Bajcsy, Andrea and Loquercio, Antonio and Kumar, Ashish and Malik, Jitendra},
   title     = {Learning Vision-based Pursuit-Evasion Robot Policies},
-  journal   = {Conference on Robot Learning},
+  journal   = {arXiv},
   year      = {2023},
 }
 ```
