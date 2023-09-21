@@ -4,10 +4,10 @@ This is the repository that contains source code for the [project website](https
 
 Please cite:
 ```
-@article{bajcsy2023vision
-  author    = {Bajcsy, Andrea and Loquercio, Antonio and Kumar, Ashish and Malik, Jitendra},
-  title     = {Learning Vision-based Pursuit-Evasion Robot Policies},
-  journal   = {arXiv},
-  year      = {2023},
+@article{bajcsy2023learning,
+  title={Learning Vision-based Pursuit-Evasion Robot Policies},
+  author={Bajcsy, Andrea and Loquercio, Antonio and Kumar, Ashish and Malik, Jitendra},
+  journal={arXiv preprint arXiv:2308.16185},
+  year={2023}
 }
 ```
