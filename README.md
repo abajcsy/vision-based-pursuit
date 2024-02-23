@@ -1,6 +1,6 @@
 # Learning Vision-based Pursuit-Evasion Robot Policies
 
-This is the repository that contains source code for the [project website](https://abajcsy.github.io/vision-based-pursuit/).
+This is the repository that contains source code for the ICRA 2024 paper "Learning Vision-based Pursuit-Evasion Robot Policies". For more information, please see [project website](https://abajcsy.github.io/vision-based-pursuit/).
 
 Please cite:
 ```

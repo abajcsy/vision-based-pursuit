@@ -1,0 +1,19 @@
+# IDEs
+.idea
+
+# builds
+*.egg-info
+
+# logs
+*logs
+
+# cache
+__pycache__
+.pytest_cache
+
+# vs code
+.vscode
+
+# github
+.github
+.gitattributes
