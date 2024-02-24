@@ -4,10 +4,10 @@ This is the repository that contains source code for the ICRA 2024 paper "Learni
 
 Please cite:
 ```
-@article{bajcsy2023learning,
+@article{bajcsy2024learning,
   title={Learning Vision-based Pursuit-Evasion Robot Policies},
   author={Bajcsy, Andrea and Loquercio, Antonio and Kumar, Ashish and Malik, Jitendra},
-  journal={arXiv preprint arXiv:2308.16185},
-  year={2023}
+  journal={International Conference on Robotics and Automation (ICRA)},
+  year={2024}
 }
 ```
